@@ -25,7 +25,7 @@ awk -v i="$i" '{
   END {
   printf("#%-9s%-5s%-5s%-5s%-5s%-5s\n", "ontime", "rb", "rm", "f", "r", "bs");
   printf("%-10d%-5d%-5d%-5d%-5d%-5d\n", sum_ontime, sum_rb, sum_rm, sum_f, sum_r, sum_bs);
-  printf("%-10.2f%-5.2f%-5.2f%-5.2f%-5.2f%-5.2f\n", sum_ontime/NR, sum_rb/NR, sum_rb/NR, sum_f/NR, sum_r/NR, sum_bs/NR);}' $result_dir/result >> $result_dir/result_overall.txt
+  printf("%-10.2f%-5.2f%-5.2f%-5.2f%-5.2f%-5.2f\n", sum_ontime/NR, sum_rb/NR, sum_rb/NR, sum_f/NR, sum_r/NR, sum_bs/NR);}' sample >> result/result_overall.txt
 
 if [ "$ontime_per_node" = 1 ]; then
   for (( i=1; i<=$node_num; i++ )); do

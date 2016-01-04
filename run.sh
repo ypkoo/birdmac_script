@@ -4,13 +4,14 @@ source config.cfg
 
 DATE=`date +"%y%m%d"`
 
-dir_name="$DATE"
+dir_name="$DATE"_"$title"
 
-echo $home_dir/$dir_name
+echo $DATE
+echo $dir_name
 
-mkdir -p $home_dir/$dir_name
-mkdir -p $home_dir/$dir_name/results
-mkdir -p $home_dir/$dir_name/rawdata
+mkdir -p $dir_name
+mkdir -p $dir_name/results
+mkdir -p $dir_name/rawdata
 
 for period in "${periods[@]}"; do
   for topology in "${topologies[@]}"; do
