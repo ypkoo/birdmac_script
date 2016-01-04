@@ -3,6 +3,10 @@
 source config.cfg
 
 for mac in "${macs[@]}"; do
+	rm -rf ../"$mac"_"$title"
+done
+
+for mac in "${macs[@]}"; do
 	mkdir -p ../"$mac"_"$title"
 	mkdir -p ../"$mac"_"$title"/results
 	mkdir -p ../"$mac"_"$title"/rawdata
