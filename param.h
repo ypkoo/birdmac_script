@@ -65,7 +65,7 @@
 
 
 /* Setting */
-#define TOPOLOGY				(222)
+#define TOPOLOGY				(555)
 #define RANDOM_SEED				(1)
 #define BEACON_SUPPRESS			(1)
 #define MAX_DATA_SLOT			30

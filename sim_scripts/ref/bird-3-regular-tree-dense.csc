@@ -353,7 +353,7 @@
   <plugin>
     se.sics.cooja.plugins.ScriptRunner
     <plugin_config>
-      <script>/*&#xD;
+      <script>importPackage(java.io);&#xD;
  * Example Contiki test script (JavaScript).&#xD;
  * A Contiki test script acts on mote output, such as via printf()'s.&#xD;
  * The script may operate on the following variables:&#xD;

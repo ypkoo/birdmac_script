@@ -685,30 +685,3 @@
  *  Mote mote, int id, String msg&#xD;
  */&#xD;
 &#xD;
-TIMEOUT(18000000);&#xD;
-output1 = new FileWriter("160104_sim/600-5-32-dense-1-result");&#xD;
-output2 = new FileWriter("160104_sim/600-5-32-dense-1-power");&#xD;
-plugin = mote.getSimulation().getGUI().getStartedPlugin("PowerTracker");&#xD;
-&#xD;
-while (true) {&#xD;
-  output1.write(msg + "\n");&#xD;
-  log.log(time + ":" + id + ":" + msg + "\n");&#xD;
-  try{&#xD;
-    YIELD();&#xD;
-  } catch (e) {&#xD;
-    stats = plugin.radioStatistics();&#xD;
-    output2.write(stats + "\n");&#xD;
-    output1.close();&#xD;
-    output2.close();&#xD;
-    throw('test script killed')&#xD;
-  }&#xD;
-}</script>
-      <active>true</active>
-    </plugin_config>
-    <width>600</width>
-    <z>4</z>
-    <height>700</height>
-    <location_x>849</location_x>
-    <location_y>149</location_y>
-  </plugin>
-</simconf>

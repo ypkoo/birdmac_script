@@ -23,7 +23,7 @@
     </events>
     <motetype>
       se.sics.cooja.contikimote.ContikiMoteType
-      <identifier>mtype52</identifier>
+      <identifier>mtype854</identifier>
       <description>Cooja Mote Type #1</description>
       <source>[CONTIKI_DIR]/lanada/app/app.c</source>
       <commands>make app.cooja TARGET=cooja</commands>
@@ -60,13 +60,13 @@
         se.sics.cooja.contikimote.interfaces.ContikiRadio
         <bitrate>250.0</bitrate>
       </interface_config>
-      <motetype_identifier>mtype52</motetype_identifier>
+      <motetype_identifier>mtype854</motetype_identifier>
     </mote>
     <mote>
       <interface_config>
         se.sics.cooja.interfaces.Position
-        <x>10.993622077644538</x>
-        <y>-0.8525067084447788</y>
+        <x>14.081517548857835</x>
+        <y>2.235388762768517</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -77,13 +77,13 @@
         se.sics.cooja.contikimote.interfaces.ContikiRadio
         <bitrate>250.0</bitrate>
       </interface_config>
-      <motetype_identifier>mtype52</motetype_identifier>
+      <motetype_identifier>mtype854</motetype_identifier>
     </mote>
     <mote>
       <interface_config>
         se.sics.cooja.interfaces.Position
-        <x>10.993622077644538</x>
-        <y>22.306709325654943</y>
+        <x>14.241440649847021</x>
+        <y>27.922006409271575</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -94,13 +94,13 @@
         se.sics.cooja.contikimote.interfaces.ContikiRadio
         <bitrate>250.0</bitrate>
       </interface_config>
-      <motetype_identifier>mtype52</motetype_identifier>
+      <motetype_identifier>mtype854</motetype_identifier>
     </mote>
     <mote>
       <interface_config>
         se.sics.cooja.interfaces.Position
-        <x>33.5352590175016</x>
-        <y>31.2616061921735</y>
+        <x>41.56378724265617</x>
+        <y>22.306709325654943</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -111,13 +111,13 @@
         se.sics.cooja.contikimote.interfaces.ContikiRadio
         <bitrate>250.0</bitrate>
       </interface_config>
-      <motetype_identifier>mtype52</motetype_identifier>
+      <motetype_identifier>mtype854</motetype_identifier>
     </mote>
     <mote>
       <interface_config>
         se.sics.cooja.interfaces.Position
-        <x>46.903338844446154</x>
-        <y>12.969974205524505</y>
+        <x>39.71104995992819</x>
+        <y>-1.1612962555661084</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -128,13 +128,13 @@
         se.sics.cooja.contikimote.interfaces.ContikiRadio
         <bitrate>250.0</bitrate>
       </interface_config>
-      <motetype_identifier>mtype52</motetype_identifier>
+      <motetype_identifier>mtype854</motetype_identifier>
     </mote>
     <mote>
       <interface_config>
         se.sics.cooja.interfaces.Position
-        <x>34.15283811174426</x>
-        <y>-7.337087197992701</y>
+        <x>-5.239351053569911</x>
+        <y>-4.29622602330259</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -145,13 +145,13 @@
         se.sics.cooja.contikimote.interfaces.ContikiRadio
         <bitrate>250.0</bitrate>
       </interface_config>
-      <motetype_identifier>mtype52</motetype_identifier>
+      <motetype_identifier>mtype854</motetype_identifier>
     </mote>
     <mote>
       <interface_config>
         se.sics.cooja.interfaces.Position
-        <x>-2.5931179956939636</x>
-        <y>-9.189824480720677</y>
+        <x>-0.7403807129659858</x>
+        <y>-7.337087197992701</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -162,13 +162,13 @@
         se.sics.cooja.contikimote.interfaces.ContikiRadio
         <bitrate>250.0</bitrate>
       </interface_config>
-      <motetype_identifier>mtype52</motetype_identifier>
+      <motetype_identifier>mtype854</motetype_identifier>
     </mote>
     <mote>
       <interface_config>
         se.sics.cooja.interfaces.Position
-        <x>-5.68101346690726</x>
-        <y>-2.7052439911727566</y>
+        <x>-5.988612272932101</x>
+        <y>-0.3001661867042445</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -179,13 +179,13 @@
         se.sics.cooja.contikimote.interfaces.ContikiRadio
         <bitrate>250.0</bitrate>
       </interface_config>
-      <motetype_identifier>mtype52</motetype_identifier>
+      <motetype_identifier>mtype854</motetype_identifier>
     </mote>
     <mote>
       <interface_config>
         se.sics.cooja.interfaces.Position
-        <x>0.4947774755193326</x>
-        <y>-3.014033538294086</y>
+        <x>0.5049849615402108</x>
+        <y>-1.0494274060664344</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -196,13 +196,13 @@
         se.sics.cooja.contikimote.interfaces.ContikiRadio
         <bitrate>250.0</bitrate>
       </interface_config>
-      <motetype_identifier>mtype52</motetype_identifier>
+      <motetype_identifier>mtype854</motetype_identifier>
     </mote>
     <mote>
       <interface_config>
         se.sics.cooja.interfaces.Position
-        <x>-11.239225315091192</x>
-        <y>-5.484349915264723</y>
+        <x>-3.491074875058135</x>
+        <y>36.41363356204306</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -213,13 +213,13 @@
         se.sics.cooja.contikimote.interfaces.ContikiRadio
         <bitrate>250.0</bitrate>
       </interface_config>
-      <motetype_identifier>mtype52</motetype_identifier>
+      <motetype_identifier>mtype854</motetype_identifier>
     </mote>
     <mote>
       <interface_config>
         se.sics.cooja.interfaces.Position
-        <x>-4.5017980086359355</x>
-        <y>3.1935371353064386</y>
+        <x>3.7517835787763665</x>
+        <y>43.65649201587756</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -230,13 +230,13 @@
         se.sics.cooja.contikimote.interfaces.ContikiRadio
         <bitrate>250.0</bitrate>
       </interface_config>
-      <motetype_identifier>mtype52</motetype_identifier>
+      <motetype_identifier>mtype854</motetype_identifier>
     </mote>
     <mote>
       <interface_config>
         se.sics.cooja.interfaces.Position
-        <x>-2.901907542815293</x>
-        <y>38.05497622884275</y>
+        <x>2.253261140051987</x>
+        <y>40.6594471384288</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -247,13 +247,13 @@
         se.sics.cooja.contikimote.interfaces.ContikiRadio
         <bitrate>250.0</bitrate>
       </interface_config>
-      <motetype_identifier>mtype52</motetype_identifier>
+      <motetype_identifier>mtype854</motetype_identifier>
     </mote>
     <mote>
       <interface_config>
         se.sics.cooja.interfaces.Position
-        <x>3.273883399611299</x>
-        <y>38.98134487020674</y>
+        <x>6.499074716437729</x>
+        <y>43.65649201587756</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -264,13 +264,13 @@
         se.sics.cooja.contikimote.interfaces.ContikiRadio
         <bitrate>250.0</bitrate>
       </interface_config>
-      <motetype_identifier>mtype52</motetype_identifier>
+      <motetype_identifier>mtype854</motetype_identifier>
     </mote>
     <mote>
       <interface_config>
         se.sics.cooja.interfaces.Position
-        <x>1.1123565697619917</x>
-        <y>36.202238946114775</y>
+        <x>57.620843692965316</x>
+        <y>36.819818040357426</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -281,13 +281,13 @@
         se.sics.cooja.contikimote.interfaces.ContikiRadio
         <bitrate>250.0</bitrate>
       </interface_config>
-      <motetype_identifier>mtype52</motetype_identifier>
+      <motetype_identifier>mtype854</motetype_identifier>
     </mote>
     <mote>
       <interface_config>
         se.sics.cooja.interfaces.Position
-        <x>3.273883399611299</x>
-        <y>39.29013441732807</y>
+        <x>53.915369127509365</x>
+        <y>38.98134487020674</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -298,13 +298,13 @@
         se.sics.cooja.contikimote.interfaces.ContikiRadio
         <bitrate>250.0</bitrate>
       </interface_config>
-      <motetype_identifier>mtype52</motetype_identifier>
+      <motetype_identifier>mtype854</motetype_identifier>
     </mote>
     <mote>
       <interface_config>
         se.sics.cooja.interfaces.Position
-        <x>4.817831135217947</x>
-        <y>41.14287170005605</y>
+        <x>53.60657958038802</x>
+        <y>32.49676438065882</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -315,13 +315,13 @@
         se.sics.cooja.contikimote.interfaces.ContikiRadio
         <bitrate>250.0</bitrate>
       </interface_config>
-      <motetype_identifier>mtype52</motetype_identifier>
+      <motetype_identifier>mtype854</motetype_identifier>
     </mote>
     <mote>
       <interface_config>
         se.sics.cooja.interfaces.Position
-        <x>41.56378724265617</x>
-        <y>45.77471490687599</y>
+        <x>57.92963324008664</x>
+        <y>30.33523755080951</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -332,13 +332,13 @@
         se.sics.cooja.contikimote.interfaces.ContikiRadio
         <bitrate>250.0</bitrate>
       </interface_config>
-      <motetype_identifier>mtype52</motetype_identifier>
+      <motetype_identifier>mtype854</motetype_identifier>
     </mote>
     <mote>
       <interface_config>
         se.sics.cooja.interfaces.Position
-        <x>43.725314072505476</x>
-        <y>50.09776856657461</y>
+        <x>55.76810641023734</x>
+        <y>-11.042561763448656</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -349,13 +349,13 @@
         se.sics.cooja.contikimote.interfaces.ContikiRadio
         <bitrate>250.0</bitrate>
       </interface_config>
-      <motetype_identifier>mtype52</motetype_identifier>
+      <motetype_identifier>mtype854</motetype_identifier>
     </mote>
     <mote>
       <interface_config>
         se.sics.cooja.interfaces.Position
-        <x>36.931944035836224</x>
-        <y>44.53955671839068</y>
+        <x>52.98900048614537</x>
+        <y>-9.189824480720677</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -366,13 +366,13 @@
         se.sics.cooja.contikimote.interfaces.ContikiRadio
         <bitrate>250.0</bitrate>
       </interface_config>
-      <motetype_identifier>mtype52</motetype_identifier>
+      <motetype_identifier>mtype854</motetype_identifier>
     </mote>
     <mote>
       <interface_config>
         se.sics.cooja.interfaces.Position
-        <x>38.167102224321546</x>
-        <y>50.715347660817265</y>
+        <x>47.73957818508276</x>
+        <y>-13.512878140419293</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -383,13 +383,13 @@
         se.sics.cooja.contikimote.interfaces.ContikiRadio
         <bitrate>250.0</bitrate>
       </interface_config>
-      <motetype_identifier>mtype52</motetype_identifier>
+      <motetype_identifier>mtype854</motetype_identifier>
     </mote>
     <mote>
       <interface_config>
         se.sics.cooja.interfaces.Position
-        <x>34.46162765886559</x>
-        <y>47.009873095361314</y>
+        <x>54.224158674630694</x>
+        <y>-15.98319451738993</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -400,183 +400,13 @@
         se.sics.cooja.contikimote.interfaces.ContikiRadio
         <bitrate>250.0</bitrate>
       </interface_config>
-      <motetype_identifier>mtype52</motetype_identifier>
-    </mote>
-    <mote>
-      <interface_config>
-        se.sics.cooja.interfaces.Position
-        <x>67.4023197981292</x>
-        <y>23.06178021349154</y>
-        <z>0.0</z>
-      </interface_config>
-      <interface_config>
-        se.sics.cooja.contikimote.interfaces.ContikiMoteID
-        <id>22</id>
-      </interface_config>
-      <interface_config>
-        se.sics.cooja.contikimote.interfaces.ContikiRadio
-        <bitrate>250.0</bitrate>
-      </interface_config>
-      <motetype_identifier>mtype52</motetype_identifier>
-    </mote>
-    <mote>
-      <interface_config>
-        se.sics.cooja.interfaces.Position
-        <x>62.987154669643616</x>
-        <y>24.00788702673845</y>
-        <z>0.0</z>
-      </interface_config>
-      <interface_config>
-        se.sics.cooja.contikimote.interfaces.ContikiMoteID
-        <id>23</id>
-      </interface_config>
-      <interface_config>
-        se.sics.cooja.contikimote.interfaces.ContikiRadio
-        <bitrate>250.0</bitrate>
-      </interface_config>
-      <motetype_identifier>mtype52</motetype_identifier>
-    </mote>
-    <mote>
-      <interface_config>
-        se.sics.cooja.interfaces.Position
-        <x>65.51010617163537</x>
-        <y>21.80030446249566</y>
-        <z>0.0</z>
-      </interface_config>
-      <interface_config>
-        se.sics.cooja.contikimote.interfaces.ContikiMoteID
-        <id>24</id>
-      </interface_config>
-      <interface_config>
-        se.sics.cooja.contikimote.interfaces.ContikiRadio
-        <bitrate>250.0</bitrate>
-      </interface_config>
-      <motetype_identifier>mtype52</motetype_identifier>
-    </mote>
-    <mote>
-      <interface_config>
-        se.sics.cooja.interfaces.Position
-        <x>62.671785731894644</x>
-        <y>26.84620746647918</y>
-        <z>0.0</z>
-      </interface_config>
-      <interface_config>
-        se.sics.cooja.contikimote.interfaces.ContikiMoteID
-        <id>25</id>
-      </interface_config>
-      <interface_config>
-        se.sics.cooja.contikimote.interfaces.ContikiRadio
-        <bitrate>250.0</bitrate>
-      </interface_config>
-      <motetype_identifier>mtype52</motetype_identifier>
-    </mote>
-    <mote>
-      <interface_config>
-        se.sics.cooja.interfaces.Position
-        <x>64.87936829613743</x>
-        <y>27.16157640422815</y>
-        <z>0.0</z>
-      </interface_config>
-      <interface_config>
-        se.sics.cooja.contikimote.interfaces.ContikiMoteID
-        <id>26</id>
-      </interface_config>
-      <interface_config>
-        se.sics.cooja.contikimote.interfaces.ContikiRadio
-        <bitrate>250.0</bitrate>
-      </interface_config>
-      <motetype_identifier>mtype52</motetype_identifier>
-    </mote>
-    <mote>
-      <interface_config>
-        se.sics.cooja.interfaces.Position
-        <x>39.965222213968815</x>
-        <y>-26.13577407534776</y>
-        <z>0.0</z>
-      </interface_config>
-      <interface_config>
-        se.sics.cooja.contikimote.interfaces.ContikiMoteID
-        <id>27</id>
-      </interface_config>
-      <interface_config>
-        se.sics.cooja.contikimote.interfaces.ContikiRadio
-        <bitrate>250.0</bitrate>
-      </interface_config>
-      <motetype_identifier>mtype52</motetype_identifier>
-    </mote>
-    <mote>
-      <interface_config>
-        se.sics.cooja.interfaces.Position
-        <x>43.749649466956456</x>
-        <y>-20.459133195866304</y>
-        <z>0.0</z>
-      </interface_config>
-      <interface_config>
-        se.sics.cooja.contikimote.interfaces.ContikiMoteID
-        <id>28</id>
-      </interface_config>
-      <interface_config>
-        se.sics.cooja.contikimote.interfaces.ContikiRadio
-        <bitrate>250.0</bitrate>
-      </interface_config>
-      <motetype_identifier>mtype52</motetype_identifier>
-    </mote>
-    <mote>
-      <interface_config>
-        se.sics.cooja.interfaces.Position
-        <x>46.903338844446154</x>
-        <y>-18.882288507121455</y>
-        <z>0.0</z>
-      </interface_config>
-      <interface_config>
-        se.sics.cooja.contikimote.interfaces.ContikiMoteID
-        <id>29</id>
-      </interface_config>
-      <interface_config>
-        se.sics.cooja.contikimote.interfaces.ContikiRadio
-        <bitrate>250.0</bitrate>
-      </interface_config>
-      <motetype_identifier>mtype52</motetype_identifier>
-    </mote>
-    <mote>
-      <interface_config>
-        se.sics.cooja.interfaces.Position
-        <x>38.073008587475</x>
-        <y>-21.720608946862182</y>
-        <z>0.0</z>
-      </interface_config>
-      <interface_config>
-        se.sics.cooja.contikimote.interfaces.ContikiMoteID
-        <id>30</id>
-      </interface_config>
-      <interface_config>
-        se.sics.cooja.contikimote.interfaces.ContikiRadio
-        <bitrate>250.0</bitrate>
-      </interface_config>
-      <motetype_identifier>mtype52</motetype_identifier>
-    </mote>
-    <mote>
-      <interface_config>
-        se.sics.cooja.interfaces.Position
-        <x>45.01112521795233</x>
-        <y>-24.24356044885394</y>
-        <z>0.0</z>
-      </interface_config>
-      <interface_config>
-        se.sics.cooja.contikimote.interfaces.ContikiMoteID
-        <id>31</id>
-      </interface_config>
-      <interface_config>
-        se.sics.cooja.contikimote.interfaces.ContikiRadio
-        <bitrate>250.0</bitrate>
-      </interface_config>
-      <motetype_identifier>mtype52</motetype_identifier>
+      <motetype_identifier>mtype854</motetype_identifier>
     </mote>
   </simulation>
   <plugin>
     se.sics.cooja.plugins.SimControl
     <width>280</width>
-    <z>3</z>
+    <z>2</z>
     <height>160</height>
     <location_x>400</location_x>
     <location_y>0</location_y>
@@ -588,10 +418,10 @@
       <skin>se.sics.cooja.plugins.skins.IDVisualizerSkin</skin>
       <skin>se.sics.cooja.plugins.skins.TrafficVisualizerSkin</skin>
       <skin>se.sics.cooja.plugins.skins.UDGMVisualizerSkin</skin>
-      <viewport>3.17088933088264 0.0 0.0 3.17088933088264 132.27470327537242 101.8736471698793</viewport>
+      <viewport>3.238451590484311 0.0 0.0 3.238451590484311 111.3976870974686 115.76080170586154</viewport>
     </plugin_config>
     <width>400</width>
-    <z>0</z>
+    <z>1</z>
     <height>400</height>
     <location_x>1</location_x>
     <location_y>1</location_y>
@@ -604,7 +434,7 @@
       <coloring />
     </plugin_config>
     <width>1455</width>
-    <z>2</z>
+    <z>3</z>
     <height>240</height>
     <location_x>400</location_x>
     <location_y>160</location_y>
@@ -633,23 +463,13 @@
       <mote>18</mote>
       <mote>19</mote>
       <mote>20</mote>
-      <mote>21</mote>
-      <mote>22</mote>
-      <mote>23</mote>
-      <mote>24</mote>
-      <mote>25</mote>
-      <mote>26</mote>
-      <mote>27</mote>
-      <mote>28</mote>
-      <mote>29</mote>
-      <mote>30</mote>
       <showRadioRXTX />
       <showRadioHW />
       <showLEDs />
       <zoomfactor>100000.0</zoomfactor>
     </plugin_config>
     <width>1855</width>
-    <z>1</z>
+    <z>0</z>
     <height>349</height>
     <location_x>0</location_x>
     <location_y>583</location_y>
@@ -685,30 +505,3 @@
  *  Mote mote, int id, String msg&#xD;
  */&#xD;
 &#xD;
-TIMEOUT(18000000);&#xD;
-output1 = new FileWriter("160104_sim/600-5-32-dense-1-result");&#xD;
-output2 = new FileWriter("160104_sim/600-5-32-dense-1-power");&#xD;
-plugin = mote.getSimulation().getGUI().getStartedPlugin("PowerTracker");&#xD;
-&#xD;
-while (true) {&#xD;
-  output1.write(msg + "\n");&#xD;
-  log.log(time + ":" + id + ":" + msg + "\n");&#xD;
-  try{&#xD;
-    YIELD();&#xD;
-  } catch (e) {&#xD;
-    stats = plugin.radioStatistics();&#xD;
-    output2.write(stats + "\n");&#xD;
-    output1.close();&#xD;
-    output2.close();&#xD;
-    throw('test script killed')&#xD;
-  }&#xD;
-}</script>
-      <active>true</active>
-    </plugin_config>
-    <width>600</width>
-    <z>4</z>
-    <height>700</height>
-    <location_x>849</location_x>
-    <location_y>149</location_y>
-  </plugin>
-</simconf>

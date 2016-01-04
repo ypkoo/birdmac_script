@@ -13,8 +13,8 @@
     <motedelay_us>100000</motedelay_us>
     <radiomedium>
       se.sics.cooja.radiomediums.UDGM
-      <transmitting_range>40.0</transmitting_range>
-      <interference_range>41.0</interference_range>
+      <transmitting_range>23.0</transmitting_range>
+      <interference_range>24.0</interference_range>
       <success_ratio_tx>1.0</success_ratio_tx>
       <success_ratio_rx>1.0</success_ratio_rx>
     </radiomedium>
@@ -116,8 +116,8 @@
     <mote>
       <interface_config>
         se.sics.cooja.interfaces.Position
-        <x>46.903338844446154</x>
-        <y>12.969974205524505</y>
+        <x>48.66594682644675</x>
+        <y>12.734233364893724</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -588,10 +588,10 @@
       <skin>se.sics.cooja.plugins.skins.IDVisualizerSkin</skin>
       <skin>se.sics.cooja.plugins.skins.TrafficVisualizerSkin</skin>
       <skin>se.sics.cooja.plugins.skins.UDGMVisualizerSkin</skin>
-      <viewport>3.17088933088264 0.0 0.0 3.17088933088264 132.27470327537242 101.8736471698793</viewport>
+      <viewport>3.17088933088264 0.0 0.0 3.17088933088264 129.27470327537242 116.8736471698793</viewport>
     </plugin_config>
     <width>400</width>
-    <z>0</z>
+    <z>1</z>
     <height>400</height>
     <location_x>1</location_x>
     <location_y>1</location_y>
@@ -649,7 +649,7 @@
       <zoomfactor>100000.0</zoomfactor>
     </plugin_config>
     <width>1855</width>
-    <z>1</z>
+    <z>0</z>
     <height>349</height>
     <location_x>0</location_x>
     <location_y>583</location_y>
@@ -685,30 +685,3 @@
  *  Mote mote, int id, String msg&#xD;
  */&#xD;
 &#xD;
-TIMEOUT(18000000);&#xD;
-output1 = new FileWriter("160104_sim/600-5-32-dense-1-result");&#xD;
-output2 = new FileWriter("160104_sim/600-5-32-dense-1-power");&#xD;
-plugin = mote.getSimulation().getGUI().getStartedPlugin("PowerTracker");&#xD;
-&#xD;
-while (true) {&#xD;
-  output1.write(msg + "\n");&#xD;
-  log.log(time + ":" + id + ":" + msg + "\n");&#xD;
-  try{&#xD;
-    YIELD();&#xD;
-  } catch (e) {&#xD;
-    stats = plugin.radioStatistics();&#xD;
-    output2.write(stats + "\n");&#xD;
-    output1.close();&#xD;
-    output2.close();&#xD;
-    throw('test script killed')&#xD;
-  }&#xD;
-}</script>
-      <active>true</active>
-    </plugin_config>
-    <width>600</width>
-    <z>4</z>
-    <height>700</height>
-    <location_x>849</location_x>
-    <location_y>149</location_y>
-  </plugin>
-</simconf>
