@@ -1,6 +1,5 @@
 #!/bin/bash
 
-source config.cfg
 source var_config.cfg
 
 cat sim_scripts/bird-$topology-regular-tree-$density-1 > simulation.csc

@@ -1,6 +1,5 @@
 #!/bin/bash
 
-source config.cfg
 source var_config.cfg
 
 echo "

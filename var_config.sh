@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source config.cfg
+
 period=$(expr $1 \* 3600)
 timeout=$(expr $period \* 30 \* 1000)
 
@@ -9,5 +11,8 @@ topology="$3"
 seed="$4"
 check_rate="$5"
 density="$6"
-home_dir=~/koo/birdmac_exp/lanada/app
+mac="$7"
+home_dir=~/koo/$7/lanada/app
+result_dir="$7"_"$title"
+rawdata_dir="$7"_"$title"/rawdata
 timeout="$timeout"" > var_config.cfg

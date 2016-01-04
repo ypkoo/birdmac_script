@@ -1,7 +1,7 @@
 title="test_sim"
 
 macs=( birdmac_exp birdmac_exp_SI birdmac_exp_RI )
-periods=( 6 )
+periods=( 6 7 8 9 10 )
 sigmas=( 0.000003528 )
 topologies=( 2 3 )
 seeds=( 1 2 )

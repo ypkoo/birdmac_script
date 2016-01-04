@@ -1,7 +1,6 @@
 #!/bin/bash
 
 source var_config.cfg
-source config.cfg
 
 ./param.sh
 ./script.sh
