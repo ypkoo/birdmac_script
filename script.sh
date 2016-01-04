@@ -1,12 +1,13 @@
 #!/bin/bash
 
+source config.cfg
 source var_config.cfg
 
-cat $home_dir/sim_scripts/bird-$topology-regular-tree-$density-1 > $home_dir/simulation.csc
+cat sim_scripts/bird-$topology-regular-tree-$density-1 > simulation.csc
 
 echo "TIMEOUT($timeout);&#xD;
-output1 = new FileWriter(\"$result_dir/$period-$topology-$check_rate-$density-$seed-result\");&#xD;
-output2 = new FileWriter(\"$result_dir/$period-$topology-$check_rate-$density-$seed-power\");&#xD;
+output1 = new FileWriter(\"../$rawdata_dir/$period-$topology-$check_rate-$density-$seed-result\");&#xD;
+output2 = new FileWriter(\"../$rawdata_dir/$period-$topology-$check_rate-$density-$seed-power\");&#xD;
 plugin = mote.getSimulation().getGUI().getStartedPlugin(\"PowerTracker\");&#xD;
 &#xD;
 while (true) {&#xD;
@@ -20,6 +21,6 @@ while (true) {&#xD;
     output1.close();&#xD;
     output2.close();&#xD;
     throw('test script killed')&#xD;
-  }&#xD;" >> $home_dir/simulation.csc
+  }&#xD;" >> simulation.csc
 
-cat $home_dir/sim_scripts/bird-$topology-regular-tree-$density-2 >> $home_dir/simulation.csc
+cat sim_scripts/bird-$topology-regular-tree-$density-2 >> simulation.csc

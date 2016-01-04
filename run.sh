@@ -2,16 +2,11 @@
 
 source config.cfg
 
-DATE=`date +"%y%m%d"`
+rm -rf ../$result_dir
 
-dir_name="$DATE"_"$title"
-
-echo $DATE
-echo $dir_name
-
-mkdir -p $dir_name
-mkdir -p $dir_name/results
-mkdir -p $dir_name/rawdata
+mkdir -p ../$result_dir
+mkdir -p ../$result_dir/results
+mkdir -p ../$result_dir/rawdata
 
 for period in "${periods[@]}"; do
   for topology in "${topologies[@]}"; do
@@ -19,7 +14,7 @@ for period in "${periods[@]}"; do
       for sigma in "${sigmas[@]}"; do
         for density in "${densities[@]}"; do
           for seed in "${seeds[@]}"; do
-            ./var_config.sh $period $sigma $topology $seed $check_rate $density $dir_name
+            ./var_config.sh $period $sigma $topology $seed $check_rate $density
             cat var_config.cfg
             ./do_simulation.sh
           done
@@ -28,3 +23,7 @@ for period in "${periods[@]}"; do
     done
   done
 done
+
+rm COOJA.log
+rm COOJA.testlog
+rm -rf se

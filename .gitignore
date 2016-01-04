@@ -9,10 +9,11 @@ app.c
 app.cooja
 run_micaz.sh
 se
-simulations.csc
+*.csc
 symbols.c
 symbols.h
 topology.h
 var_config.cfg
 z1.sh
 .svn
+*.sh~
