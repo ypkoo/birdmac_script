@@ -3,13 +3,13 @@
 source config.cfg
 
 for mac in "${macs[@]}"; do
-	rm -rf ../"$mac"_"$title"
+	rm -rf ../"$title"_"$mac"
 done
 
 for mac in "${macs[@]}"; do
-	mkdir -p ../"$mac"_"$title"
-	mkdir -p ../"$mac"_"$title"/results
-	mkdir -p ../"$mac"_"$title"/rawdata
+	mkdir -p ../"$title"_"$mac"
+	mkdir -p ../"$title"_"$mac"/results
+	mkdir -p ../"$title"_"$mac"/rawdata
 	for period in "${periods[@]}"; do
 	  for topology in "${topologies[@]}"; do
 	    for check_rate in "${check_rates[@]}"; do

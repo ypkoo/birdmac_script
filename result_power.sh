@@ -3,7 +3,7 @@
 source config.cfg
 
 for mac in "${macs[@]}"; do
-	result_dir="$mac"_"$title"
+	result_dir="$title"_"$mac"
 	rawdata_dir="$result_dir"/rawdata
 	files=$(ls ../$rawdata_dir/*result)
 
@@ -15,7 +15,7 @@ for mac in "${macs[@]}"; do
 done
 
 for mac in "${macs[@]}"; do
-	result_dir="$mac"_"$title"
+	result_dir="$title"_"$mac"
 	rawdata_dir="$result_dir"/rawdata
 	rm -f ../$result_dir/over_period
 	for topology in "${topologies[@]}"; do
@@ -40,7 +40,7 @@ for mac in "${macs[@]}"; do
 done
 
 for mac in "${macs[@]}"; do
-	result_dir="$mac"_"$title"
+	result_dir="$title"_"$mac"
 	rawdata_dir="$result_dir"/rawdata
 	rm -f ../$result_dir/over_degree
 	for period_ in "${periods[@]}"; do
