@@ -3,6 +3,7 @@
 source config.cfg
 source var_config.cfg
 
+
 id_idx=2
 cycle_idx=3
 mode_idx=4
@@ -18,6 +19,8 @@ for mac in "${macs[@]}"; do
 	result_dir=../"$title"_"$mac"
 	rawdata_dir="$result_dir"/rawdata
 	files=$(ls $rawdata_dir/*result)
+
+	rm -f $result_dir/results/*
 
 	for file in $files; do
 		grep "\[data\]" $file > temp
@@ -53,27 +56,45 @@ for mac in "${macs[@]}"; do
 										print i, sum_ontime_p/cycle_num, sum_rb_p/cycle_num, sum_rm_p/cycle_num, sum_f_p/cycle_num, sum_r_p/cycle_num, sum_bs_p/cycle_num, sum_ontime_c/cycle_num, sum_rb_c/cycle_num, sum_rm_c/cycle_num, sum_f_c/cycle_num, sum_r_c/cycle_num, sum_bs_c/cycle_num;}' $rawdata_dir/$filename-result >> $result_dir/results/$filename
   						done
 
-							awk '{print $1, $2+$8}' $result_dir/results/$filename > $result_dir/results/ontime-$filename
-							awk '{print $1, $3+$9}' $result_dir/results/$filename > $result_dir/results/rb-$filename
-							awk '{print $1, $4+$10}' $result_dir/results/$filename > $result_dir/results/rm-$filename
-							awk '{print $1, $5+$11}' $result_dir/results/$filename > $result_dir/results/f-$filename
-							awk '{print $1, $6+$12}' $result_dir/results/$filename > $result_dir/results/r-$filename
-							awk '{print $1, $7+$13}' $result_dir/results/$filename > $result_dir/results/bs-$filename
 
-							awk '{print $1, $2}' $result_dir/results/$filename > $result_dir/results/ontime-$filename-par
-							awk '{print $1, $3}' $result_dir/results/$filename > $result_dir/results/rb-$filename-par
-							awk '{print $1, $4}' $result_dir/results/$filename > $result_dir/results/rm-$filename-par
-							awk '{print $1, $5}' $result_dir/results/$filename > $result_dir/results/f-$filename-par
-							awk '{print $1, $6}' $result_dir/results/$filename > $result_dir/results/r-$filename-par
-							awk '{print $1, $7}' $result_dir/results/$filename > $result_dir/results/bs-$filename-par
-
-							awk '{print $1, $8}' $result_dir/results/$filename > $result_dir/results/ontime-$filename-chi
-							awk '{print $1, $9}' $result_dir/results/$filename > $result_dir/results/rb-$filename-chi
-							awk '{print $1, $10}' $result_dir/results/$filename > $result_dir/results/rm-$filename-chi
-							awk '{print $1, $11}' $result_dir/results/$filename > $result_dir/results/f-$filename-chi
-							awk '{print $1, $12}' $result_dir/results/$filename > $result_dir/results/r-$filename-chi
-							awk '{print $1, $13}' $result_dir/results/$filename > $result_dir/results/bs-$filename-chi
 						done
+						filename=$period-$topology-$check_rate-$density
+						node_num=$(awk 'BEGIN {max=0}; {if (max < $2) {max=$2};}; END{print max}' $rawdata_dir/$filename-1-result)
+						file_list=$(ls $result_dir/results/$filename-*)
+						
+						rm -f temp
+						for file in $file_list; do
+							cat $file >> temp
+							rm -f $file
+						done	
+
+						for (( i=1; i<=$node_num; i++ )); do
+							awk -v i="$i" '{
+								if ($1==i) {sum2+=$2; sum3+=$3; sum4+=$4; sum5+=$5; sum6+=$6; sum7+=$7; sum8+=$8; sum9+=$9; sum10+=$10; sum11+=$11; sum12+=$12; sum13+=$13; n++}}
+								END {print i, sum2/n, sum3/n, sum4/n, sum5/n, sum6/n, sum7/n, sum8/n, sum9/n, sum10/n, sum11/n, sum12/n, sum13/n, n;}' temp >> $result_dir/results/$filename
+						done
+						rm -f temp						
+
+						awk '{print $1, $2+$8}' $result_dir/results/$filename > $result_dir/results/ontime-$filename
+						awk '{print $1, $3+$9}' $result_dir/results/$filename > $result_dir/results/rb-$filename
+						awk '{print $1, $4+$10}' $result_dir/results/$filename > $result_dir/results/rm-$filename
+						awk '{print $1, $5+$11}' $result_dir/results/$filename > $result_dir/results/f-$filename
+						awk '{print $1, $6+$12}' $result_dir/results/$filename > $result_dir/results/r-$filename
+						awk '{print $1, $7+$13}' $result_dir/results/$filename > $result_dir/results/bs-$filename
+
+						awk '{print $1, $2}' $result_dir/results/$filename > $result_dir/results/ontime-$filename-par
+						awk '{print $1, $3}' $result_dir/results/$filename > $result_dir/results/rb-$filename-par
+						awk '{print $1, $4}' $result_dir/results/$filename > $result_dir/results/rm-$filename-par
+						awk '{print $1, $5}' $result_dir/results/$filename > $result_dir/results/f-$filename-par
+						awk '{print $1, $6}' $result_dir/results/$filename > $result_dir/results/r-$filename-par
+						awk '{print $1, $7}' $result_dir/results/$filename > $result_dir/results/bs-$filename-par
+
+						awk '{print $1, $8}' $result_dir/results/$filename > $result_dir/results/ontime-$filename-chi
+						awk '{print $1, $9}' $result_dir/results/$filename > $result_dir/results/rb-$filename-chi
+						awk '{print $1, $10}' $result_dir/results/$filename > $result_dir/results/rm-$filename-chi
+						awk '{print $1, $11}' $result_dir/results/$filename > $result_dir/results/f-$filename-chi
+						awk '{print $1, $12}' $result_dir/results/$filename > $result_dir/results/r-$filename-chi
+						awk '{print $1, $13}' $result_dir/results/$filename > $result_dir/results/bs-$filename-chi
 					done
 	      done
 	    done
