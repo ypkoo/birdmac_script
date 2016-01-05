@@ -39,7 +39,7 @@ echo "
 #define SIGMA					(PERIOD*($sigma))
 #if PLATFORM_L ==  COOJA_L
 	#define CARRIER_SENSING_TIME	1*CLOCK_SECOND/128  //7ms
-	#define WAIT_ACK_TIME			3*CLOCK_SECOND/128  //3*CLOCK_SECOND/128
+	#define WAIT_ACK_TIME			1*CLOCK_SECOND/128  //3*CLOCK_SECOND/128
 	#define DWELL_TIME				3*CLOCK_SECOND/128  // after parent finishes SYNC wait for additional packet for BS
 	#define WAIT_PULSE_TIME			3*CLOCK_SECOND/128	// wait time after sending BEACON_P
 	#define NEXT_WAKEUP_TIME		(40*CLOCK_SECOND)
