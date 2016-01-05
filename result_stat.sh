@@ -1,8 +1,6 @@
 #!/bin/bash
 
 source config.cfg
-source var_config.cfg
-
 
 id_idx=2
 cycle_idx=3

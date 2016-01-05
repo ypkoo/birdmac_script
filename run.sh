@@ -1,7 +1,6 @@
 #!/bin/bash
 
 source config.cfg
-
 for mac in "${macs[@]}"; do
 	rm -rf ../"$title"_"$mac"
 done
@@ -31,4 +30,5 @@ rm COOJA.log
 rm COOJA.testlog
 rm -rf se
 
-./result_stat.sh
+#./result_power.sh
+#./result_stat.sh
