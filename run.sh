@@ -30,3 +30,5 @@ done
 rm COOJA.log
 rm COOJA.testlog
 rm -rf se
+
+./result_stat.sh
