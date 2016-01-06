@@ -7,6 +7,7 @@ for mac in "${macs[@]}"; do
 	rawdata_dir="$result_dir"/rawdata
 	mkdir -p ../$result_dir/rates
 	rm -f ../$result_dir/rates/*
+	rm -f ../$result_dir/min_results/*
 	files=$(ls ../$rawdata_dir/*result)
 
 	for file in $files; do
@@ -29,7 +30,9 @@ for mac in "${macs[@]}"; do
 						period=$(expr $period_ \* 3600)
 						rm -f temp_power
 				    for seed in "${seeds[@]}"; do
-				      grep "AVG ON" ../$rawdata_dir/$period-$topology-$check_rate-$density-$seed-power >> temp_power
+							if [ -f ../$rawdata_dir/$period-$topology-$check_rate-$density-$seed-power ]; then
+				      	grep "AVG ON" ../$rawdata_dir/$period-$topology-$check_rate-$density-$seed-power >> temp_power
+							fi
 				    done
 						awk -v period="$period_" '{sum+=$3}; END {printf "%-4d%-10.3f\n", period, sum/NR}' temp_power >> ../$result_dir/over_period
 						rm -f temp_power
@@ -54,7 +57,9 @@ for mac in "${macs[@]}"; do
 					for topology in "${topologies[@]}"; do
 						rm -f temp_power
 		      	for seed in "${seeds[@]}"; do
-							grep "AVG ON" ../$rawdata_dir/$period-$topology-$check_rate-$density-$seed-power >> temp_power
+							if [ -f ../$rawdata_dir/$period-$topology-$check_rate-$density-$seed-power ]; then
+								grep "AVG ON" ../$rawdata_dir/$period-$topology-$check_rate-$density-$seed-power >> temp_power
+							fi
 		        done
 						awk -v degree="$topology" '{sum+=$3}; END {printf "%-4d%-10.3f\n", degree, sum/NR}' temp_power >> ../$result_dir/over_degree
 						rm -f temp_power
@@ -79,7 +84,9 @@ for mac in "${macs[@]}"; do
 					for check_rate in "${check_rates[@]}"; do
 						rm -f temp_power
 			    	for seed in "${seeds[@]}"; do
-							grep "AVG ON" ../$rawdata_dir/$period-$topology-$check_rate-$density-$seed-power >> temp_power
+							if [ -f ../$rawdata_dir/$period-$topology-$check_rate-$density-$seed-power ]; then
+								grep "AVG ON" ../$rawdata_dir/$period-$topology-$check_rate-$density-$seed-power >> temp_power
+							fi
 			      done
 						awk -v rate="$check_rate" '{sum+=$3}; END {printf "%-4d%-10.3f\n", rate, sum/NR}' temp_power >> ../$result_dir/rates/$period-$topology-$density
 						rm -f temp_power
@@ -101,26 +108,26 @@ for mac in "${macs[@]}"; do
 					for density in "${densities[@]}"; do
 						for seed in "${seeds[@]}"; do
 							filename=$period-$topology-$check_rate-$density-$seed
-							cycle_num=$(awk 'BEGIN {max=0}; {if (max < $3) {max=$3};}; END{print max}' $rawdata_dir/$filename-result)
-							node_num=$(awk 'BEGIN {max=0}; {if (max < $2) {max=$2};}; END{print max}' $rawdata_dir/$filename-result)
+							if [ -f $rawdata_dir/$filename-result ]; then
+								cycle_num=$(awk 'BEGIN {max=0}; {if (max < $3) {max=$3};}; END{print max}' $rawdata_dir/$filename-result)
+								node_num=$(awk 'BEGIN {max=0}; {if (max < $2) {max=$2};}; END{print max}' $rawdata_dir/$filename-result)
 							
-							# CHILD + PARENT
-							printf "" > $result_dir/results/$filename
-							for (( i=1; i<=$node_num; i++ )); do
-    						awk -v i="$i" -v cycle_num="$cycle_num" -v node_num="$node_num" '{
-										if ($2==i) 
-										{
-											if ($4=="PARENT") {sum_ontime_p+=$5; sum_rb_p+=$6; sum_rm_p+=$7; sum_f_p+=$8; sum_r_p+=$9; sum_bs_p+=$11;}
-											else if ($4=="CHILD") {sum_ontime_c+=$5; sum_rb_c+=$6; sum_rm_c+=$7; sum_f_c+=$8; sum_r_c+=$9; sum_bs_c+=$11;};
-										};};
-										END {
-										print i, sum_ontime_p/cycle_num, sum_rb_p/cycle_num, sum_rm_p/cycle_num, sum_f_p/cycle_num, sum_r_p/cycle_num, sum_bs_p/cycle_num, sum_ontime_c/cycle_num, sum_rb_c/cycle_num, sum_rm_c/cycle_num, sum_f_c/cycle_num, sum_r_c/cycle_num, sum_bs_c/cycle_num;}' $rawdata_dir/$filename-result >> $result_dir/results/$filename
-  						done
-
-
+								# CHILD + PARENT
+								printf "" > $result_dir/results/$filename
+								for (( i=1; i<=$node_num; i++ )); do
+		  						awk -v i="$i" -v cycle_num="$cycle_num" -v node_num="$node_num" '{
+											if ($2==i) 
+											{
+												if ($4=="PARENT") {sum_ontime_p+=$5; sum_rb_p+=$6; sum_rm_p+=$7; sum_f_p+=$8; sum_r_p+=$9; sum_bs_p+=$11;}
+												else if ($4=="CHILD") {sum_ontime_c+=$5; sum_rb_c+=$6; sum_rm_c+=$7; sum_f_c+=$8; sum_r_c+=$9; sum_bs_c+=$11;};
+											};};
+											END {
+											print i, sum_ontime_p/cycle_num, sum_rb_p/cycle_num, sum_rm_p/cycle_num, sum_f_p/cycle_num, sum_r_p/cycle_num, sum_bs_p/cycle_num, sum_ontime_c/cycle_num, sum_rb_c/cycle_num, sum_rm_c/cycle_num, sum_f_c/cycle_num, sum_r_c/cycle_num, sum_bs_c/cycle_num;}' $rawdata_dir/$filename-result >> $result_dir/results/$filename
+								done
+							fi
 						done
 						filename=$period-$topology-$check_rate-$density
-						node_num=$(awk 'BEGIN {max=0}; {if (max < $2) {max=$2};}; END{print max}' $rawdata_dir/$filename-1-result)
+						#node_num=$(awk 'BEGIN {max=0}; {if (max < $2) {max=$2};}; END{print max}' $rawdata_dir/$filename-1-result)
 						file_list=$(ls $result_dir/results/$filename-*)
 						
 						rm -f temp
